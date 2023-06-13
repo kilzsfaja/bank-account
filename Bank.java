@@ -17,7 +17,7 @@ public class Bank {
     System.out.println("Savings Account: " + weezy.getSavingsBalance());
     System.out.println("Total Balance: " + weezy.getTotal());
     System.out.println("Total Number of Accounts: " + BankAccount.getTotalAccounts());
-    System.out.println("Total Balance of all Accounts: " + weezy.getTotal());
+    System.out.println("Total Balance of all Accounts: " + weezy.getTotalBalance());
 
     // ---- tests for wayne ----
     System.out.println("---- Account Information ----");
@@ -25,7 +25,7 @@ public class Bank {
     System.out.println("Savings Account: " + wayne.getSavingsBalance());
     System.out.println("Total Balance: " + wayne.getTotal());
     System.out.println("Total Number of Accounts: " + BankAccount.getTotalAccounts());
-    System.out.println("Total Balance of all Accounts: " + wayne.getTotal());
+    System.out.println("Total Balance of all Accounts: " + wayne.getTotalBalance());
 
     }
 }
