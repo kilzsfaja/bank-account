@@ -1,7 +1,7 @@
 public class Bank {
     public static void main(String[] args){
-        BankAccount weezy = new BankAccount();
-        BankAccount wayne = new BankAccount();
+        BankAccount weezy = new BankAccount(0, 0);
+        BankAccount wayne = new BankAccount(0, 0);
 
     // ---- weezy deposits ----
     weezy.deposit(5, "checking");
@@ -17,6 +17,7 @@ public class Bank {
     System.out.println("Savings Account: " + weezy.getSavingsBalance());
     System.out.println("Total Balance: " + weezy.getTotal());
     System.out.println("Total Number of Accounts: " + BankAccount.getTotalAccounts());
+    System.out.println("Total Balance of all Accounts: " + weezy.getTotal());
 
     // ---- tests for wayne ----
     System.out.println("---- Account Information ----");
@@ -24,6 +25,7 @@ public class Bank {
     System.out.println("Savings Account: " + wayne.getSavingsBalance());
     System.out.println("Total Balance: " + wayne.getTotal());
     System.out.println("Total Number of Accounts: " + BankAccount.getTotalAccounts());
+    System.out.println("Total Balance of all Accounts: " + wayne.getTotal());
 
     }
 }

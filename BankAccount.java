@@ -4,10 +4,11 @@ public class BankAccount {
     private static int numberOfAccounts = 0;
     private static double totalBalance = 0;
 
-    public BankAccount(){
-        this.checkingBalance = 0.0;
-        this.savingsBalance = 0.0;
+    public BankAccount(double checkingBalance, double savingsBalance){
+        this.checkingBalance = checkingBalance;
+        this.savingsBalance = savingsBalance;
         numberOfAccounts++;
+        totalBalance += checkingBalance + savingsBalance;
     }
 
     // ---- getter for checking ----
@@ -15,11 +16,18 @@ public class BankAccount {
         return checkingBalance;
     }
 
+    public void setCheckingBalance(double checkingBalance){
+        this.checkingBalance = checkingBalance;
+    }
+
     // ---- getter for savings ----
     public double getSavingsBalance(){
         return savingsBalance;
     }
 
+    public void setSavingsBalance(double savingsBalance){
+        this.savingsBalance = savingsBalance;
+    }
     // ---- deposit method ----
     public void deposit(double amount, String accType){
         switch (accType.toLowerCase()){
@@ -70,5 +78,10 @@ public class BankAccount {
     // ---- get number of accounts ----
     public static int getTotalAccounts(){
         return numberOfAccounts;
+    }
+
+    // ---- get total for all accounts ----
+    public static double getTotalBalance(){
+        return totalBalance;
     }
 }
